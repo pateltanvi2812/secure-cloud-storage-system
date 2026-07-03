@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activity Logs</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <h1>Activity Logs</h1>
+
+        <ul>
+        {% for log in logs %}
+            <li>{{ log }}</li>
+        {% endfor %}
+        </ul>
+
+        <a href="/dashboard">
+            <button>Back to Dashboard</button>
+        </a>
+
+    </div>
+</div>
+
+</body>
+</html>
